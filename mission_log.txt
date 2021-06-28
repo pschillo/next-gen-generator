@@ -1,0 +1,18 @@
+text source: http://www.chakoteya.net/NextGen/episodes.htm, last accessed on February 19th, 2020
+  chosen because it contains clear distinction between speakers ("PICARD") and figures' names being mentioned ("Picard")
+  chosen because it contains clearing comments by the creator in a few places in which the scenario might be unintelligible without viewing it on screen
+  inconvenience: "To be continued" in one case vs. "To be continued..." in another, was changed to the first version in all cases
+  note: BE spelling conventions
+
+procedural correctness checks: random passage picked and checked for spelling, semantic and contextual correctness
+
+impulses:
+  also check explicitly with corresponding episode?
+  in case of BA or similar, request permission to use text base from website creator
+  log the conventions used by the creator of the database source
+  log database conventions, changes made to the original source (changes made transcribing vs. selection changes made later on)
+
+tasks completed:
+  transcribe scripts of Star Trek: The Next Generation (complete, season-wise)
+  write a script selecting specific lines (e.g. only ones spoken by Picard) from the transcript and collecting them in a new file
+  write a script removing speciic lines (e.g. "Original Airdate") from transcripts, saving improved version in a new file 
