@@ -1,5 +1,5 @@
 # next-gen-generator
-I pitched this as a project "involving machine-generated speech, star trek and, quite possibly, a telegram bot". Let's see where this goes.
+I pitched this as a project "involving machine-generated speech, star trek and, quite possibly, a telegram bot". That is pretty much what it is.
 
 ## CONTENT OVERVIEW
 - README.md: consult this file to navigate this repository.
