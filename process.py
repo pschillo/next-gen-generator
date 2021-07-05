@@ -8,7 +8,12 @@ path = "materials\chakoteya\StarTrek_NextGen_transcript_complete.txt"
 
 ## read Picard's lines from script into csv
 with open(path) as script:
-    for line in script:
-        if line[0] == "PICARD":
-            writer = csv.writer("quotes_PICARD.csv")
-            writer.writerow(line)
+    with open("quotes_PICARD.csv", "w") as file:
+        for line in script:
+            if line.startswith("PICARD"):
+                print(line)
+            #with open("quotes_PICARD.csv", "wb") as file:
+                file.write(line)
+                file.write("\n")
+                #writer = csv.writer(file, delimiter= ",")
+                #writer.writerow(line)
