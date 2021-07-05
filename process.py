@@ -15,5 +15,5 @@ with open(path) as script:
             #with open("quotes_PICARD.csv", "wb") as file:
                 file.write(line)
                 file.write("\n")
-                #writer = csv.writer(file, delimiter= ",")
+                #writer = csv.writer(file)
                 #writer.writerow(line)
