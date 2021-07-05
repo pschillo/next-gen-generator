@@ -4,7 +4,8 @@ I pitched this as a project "involving machine-generated speech, star trek and, 
 ## CONTENT OVERVIEW
 - README.md: consult this file to navigate this repository.
 - telegram.py: everything concerning the bot itself
-- process.py: non-bot related code
+- process.py: code processing raw data into usable data format
+- compute.py: non-bot related code
 - demo.py: run to test process functionality
 - project_doc.md: I shall be documenting the progress of this project here.
 - [folder] materials: this is where data and other materials are gathered for the project.
