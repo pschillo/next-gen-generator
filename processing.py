@@ -1,7 +1,7 @@
-import numpy as np
-import pandas as pd
+#import numpy as np
+#import pandas as pd
 import csv
-#import spacy
+import spacy
 
 # specify path to material
 path = "materials\chakoteya\StarTrek_NextGen_transcript_complete.txt"
@@ -25,3 +25,14 @@ def process(list,path):
                         #print(line)
                         file.write(line)
                         file.write("\n")
+
+def keywords():
+    
+
+def main():
+
+    # process raw data
+    process(list,path)
+
+if __name__ == "__main__":
+    main()
