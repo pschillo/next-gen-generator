@@ -1,5 +1,5 @@
 #import numpy as np
-#import pandas as pd
+import pandas as pd
 import csv
 import spacy
 
@@ -28,24 +28,29 @@ def process(list,path):
 
 # paths to newly created .csv's (same order as characters in 'list'!)
 filepaths = ["quotes_PICARD.csv", "quotes_DATA.csv", "quotes_Q.csv", "quotes_RIKER.csv", "quotes_TROI.csv"]
-testlist = ["quotes_PICARD.csv"]
+testlist = ["testfile.csv"]
 
 def keywords(list):
 
     # process each of the files from the list
     for path in list:
 
+        # convert to dataframe
+        dataframe = pd.read_csv(path, names=["line"])
+        dataframe = dataframe.dropna()
+        print(dataframe)
+
+        all_lemmas = []
+
         # read file
         with open(path) as file:
             filereader = csv.reader(file)
-            #print("file was read")
 
             # per row
             for row in filereader:
 
                 # concatenate row to string
                 string = "".join(str(x) for x in row)
-                #print(string)
 
                 # load spacy
                 nlp = spacy.load("en_core_web_sm")
@@ -53,14 +58,20 @@ def keywords(list):
 
                 # collect lemmas
                 lemmas = [word.lemma_ for word in doc]
-                #for word in doc:
-                #lemmas.append(row.lemma_)
-                print(lemmas)
 
                 # add lemmas as new column
-                ##row.append(lemmas)
+                all_lemmas.append(lemmas)
+                print("done")
 
-            print("this is where the keyword function goes")
+        # clean list of all lemmas
+        all = [list for list in all_lemmas if list != []]
+        print(all)
+
+        # add as second column
+        dataframe.insert(1, "lemmas", all)
+        print(dataframe)
+
+        print("this is where the keyword function goes")
 
 def main():
 
